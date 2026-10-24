@@ -35,7 +35,7 @@
             }
 
             .find-card {
-                @apply rounded-md border border-forest/10 bg-white/60 p-3 dark:border-sand/15 dark:bg-white/5;
+                @apply rounded-md border border-forest/10 bg-white/60 p-3 dark:border-sand/15 dark:bg-night;
             }
         }
     </style>
@@ -46,25 +46,26 @@
         <nav aria-label="Main navigation" class="mx-auto flex w-[min(1100px,calc(100%-2rem))] flex-wrap items-center justify-between gap-x-6 gap-y-2 py-4">
             <a class="text-lg font-bold text-forest dark:text-sand" href="#hero">Lalay's Ukay</a>
             <div class="flex flex-wrap items-center gap-x-5 gap-y-2 text-sm text-muted dark:text-sand/75">
-                <a class="hover:text-rust" href="#about">About</a>
-                <a class="hover:text-rust" href="#work">Our finds</a>
-                <a class="hover:text-rust" href="#contact">Contact</a>
-               
+                <a class="text-muted hover:text-rust dark:text-sand/75 dark:hover:text-rust" href="#about">About</a>
+                <a class="text-muted hover:text-rust dark:text-sand/75 dark:hover:text-rust" href="#work">Our finds</a>
+                <a class="text-muted hover:text-rust dark:text-sand/75 dark:hover:text-rust" href="#contact">Contact</a>
+                <button id="darkModeToggle" type="button" aria-label="Toggle dark mode" aria-pressed="false" class="rounded border border-forest/20 px-3 py-2 font-semibold text-forest hover:border-rust hover:text-rust focus:outline-2 focus:outline-offset-2 focus:outline-rust dark:border-sand/25 dark:text-sand dark:hover:text-rust">
+                    <span aria-hidden="true">◐</span> Dark mode
+                </button>
             </div>
         </nav>
     </header>
 
     <main>
-        <section id="hero" aria-labelledby="hero-title" class="mx-auto grid w-[min(1100px,calc(100%-2rem))] items-center gap-8 py-12 md:grid-cols-2 md:py-20">
+        <section id="hero" aria-labelledby="hero-title" class="mx-auto grid w-[min(1100px,calc(100%-2rem))] items-center gap-8 py-12 dark:bg-night dark:text-sand md:grid-cols-2 md:py-20">
             <div>
                 <p class="text-sm font-bold uppercase tracking-widest text-forest dark:text-rust">Secondhand finds, handpicked with care</p>
                 <h1 id="hero-title" class="mt-3 font-serif text-5xl leading-tight text-forest dark:text-sand md:text-7xl">Good finds.<br><span class="text-rust">Better stories.</span></h1>
                 <p class="mt-4 max-w-lg text-muted dark:text-sand/75">Find clothes and accessories ready for a new home. Made with care in Victorias City, Negros Occidental.</p>
                 <a class="button mt-6" href="#work">Explore Our finds <span class="ml-2" aria-hidden="true">→</span></a>
             </div>
-          
+             <img class="hero-image w-full rounded-md object-cover" src="https://images.unsplash.com/photo-1483985988355-763728e1935b?auto=format&amp;fit=crop&amp;w=1000&amp;q=80" alt="Friends wearing colorful outfits" fetchpriority="high">
         </section>
-
         <section id="about" aria-labelledby="about-title" class="bg-forest text-canvas dark:bg-[#22392f] dark:text-sand">
             <div class="mx-auto w-[min(1100px,calc(100%-2rem))] py-12 md:py-16">
                 <p class="text-sm font-bold uppercase tracking-widest text-canvas/85 dark:text-sand/85">About Lalay's</p>
@@ -73,37 +74,41 @@
             </div>
         </section>
 
-        <section id="work" aria-labelledby="work-title" class="mx-auto w-[min(1100px,calc(100%-2rem))] py-12 md:py-16">
+        <section id="work" aria-labelledby="work-title" class="mx-auto w-[min(1100px,calc(100%-2rem))] py-12 dark:bg-night dark:text-sand md:py-16">
             <div>
                 <p class="text-sm font-bold uppercase tracking-widest text-forest dark:text-rust">The latest finds</p>
                 <h2 id="work-title" class="mt-2 font-serif text-3xl text-forest dark:text-sand md:text-4xl">A little something for everyone.</h2>
                 <p class="mt-3 max-w-xl text-muted dark:text-sand/75">Browse a few favorites from our ever-changing collection Each piece is one of a kind.</p>
             </div>
             <div class="mt-7 grid gap-5 sm:grid-cols-2 md:grid-cols-3">
-                <article class="find-card dark:border-sand/15 dark:bg-white/5">
+                <article class="find-card">
+                    <img class="product-image w-full rounded object-cover" src="https://images.pexels.com/photos/7679798/pexels-photo-7679798.jpeg" alt="Vintage Jacket" loading="lazy">
                     
-                    <h3 class="mt-3 font-semibold text-forest dark:text-sand">Everyday Denim</h3>
-                    <p class="text-sm text-muted dark:text-sand/70">Vintage jacket</p>
+                    <h3 class="mt-3 font-semibold text-forest dark:text-sand">Jacket</h3>
+                    <p class="text-sm text-muted dark:text-sand/70">Vintage Jacket</p>
                 </article>
-                <article class="find-card dark:border-sand/15 dark:bg-white/5">
-                  
-                    <p class="text-sm text-muted dark:text-sand/70">Trousers</p>
+                <article class="find-card">
+                    <img class="product-image w-full rounded object-cover" src="https://media.istockphoto.com/id/600373506/photo/blue-jeans-isolated-with-clipping-path.jpg?b=1&s=612x612&w=0&k=20&c=ZOdxufuYod9qJoTZJyYjQqLEuRSyTqY-m3YxMRyyzAU=" alt="Denim Pants" loading="lazy">
+
+                    <h3 class="mt-3 font-semibold text-forest dark:text-sand">Denim</h3>
+                    <p class="text-sm text-muted dark:text-sand/70">Denim Pants</p>
                 </article>
-                <article class="find-card dark:border-sand/15 dark:bg-white/5 sm:col-span-2 md:col-span-1">
+                <article class="find-card sm:col-span-2 md:col-span-1">
+                    <img class="product-image w-full rounded object-cover" src="https://images.pexels.com/photos/19354616/pexels-photo-19354616.jpeg" alt="Vintage Accesory" loading="lazy">
                     
                     <h3 class="mt-3 font-semibold text-forest dark:text-sand">Shoulder Bag</h3>
-                    <p class="text-sm text-muted dark:text-sand/70">Vintage accessory</p>
+                    <p class="text-sm text-muted dark:text-sand/70">Vintage Accessory</p>
                 </article>
             </div>
         </section>
 
-        <section id="contact" aria-labelledby="contact-title" class="mx-auto grid w-[min(1100px,calc(100%-2rem))] gap-8 py-12 md:grid-cols-2 md:py-16">
+        <section id="contact" aria-labelledby="contact-title" class="mx-auto grid w-[min(1100px,calc(100%-2rem))] gap-8 py-12 dark:bg-night dark:text-sand md:grid-cols-2 md:py-16">
             <div>
                 <p class="text-sm font-bold uppercase tracking-widest text-forest dark:text-rust">Get in touch</p>
                 <h2 id="contact-title" class="mt-2 font-serif text-3xl text-forest dark:text-sand md:text-4xl">Let's find something special.</h2>
                 <p class="mt-4 max-w-md text-muted dark:text-sand/75">Questions about our finds or wholesale? Send us a note and we'll be happy to help.</p>
             </div>
-            <form action="#" method="get" class="grid max-w-md gap-4">
+            <form action="#" method="get" class="grid max-w-md gap-4 dark:bg-night dark:text-sand">
                 <div>
                     <label for="name" class="mb-1 block font-semibold text-ink dark:text-sand">Name</label>
                     <input class="field" type="text" id="name" name="name" autocomplete="name" required>
@@ -124,7 +129,7 @@
     <footer class="border-t border-forest/15 dark:border-sand/20">
         <div class="mx-auto flex w-[min(1100px,calc(100%-2rem))] flex-wrap justify-between gap-2 py-5 text-sm text-muted dark:text-sand/70">
             <span>Lalay's Ukay Store · Victorias City, Negros Occidental</span>
-            <a class="hover:text-rust" href="#hero">Back to top ↑</a>
+            <a class="text-muted hover:text-rust dark:text-sand/70 dark:hover:text-rust" href="#hero">Back to top ↑</a>
         </div>
     </footer>
 
