@@ -1,6 +1,8 @@
 # Lalay's Ukay
 
-**Live site:** Not deployed yet.
+**Live site:** https://c20245375paclibar-cyber.github.io/Lalay-s-Ukay/
+
+**GitHub repository:** https://github.com/c20245375paclibar-cyber/Lalay-s-Ukay
 
 ## About
 
@@ -24,21 +26,24 @@ Lalay's Ukay is a local thrift store and wholesale bodega in Victorias City, Neg
 
 ### Contrast check
 
-Body text color vs. background color: `#272923` on `#f5f1e9`  
-Contrast ratio: 13.06 : 1 (needs to be at least 4.5 : 1)  
-Tool used: WebAIM Contrast Checker
+Body text color vs. background color: `#272923` on `#f5f1e9`
+
+Contrast ratio: 13.06 : 1 (WCAG 2.2 AA requires at least 4.5 : 1)
+
+Checked using the WCAG relative-luminance contrast calculation.
 
 ## Features
 
 - [x] Semantic sections, header navigation, and footer
 - [x] Required contact form fields with associated labels
-- [x] Mobile-first Tailwind layout with responsive breakpoints
+- [x] Mobile-first Tailwind layout with small-screen, tablet, and desktop breakpoints
 - [x] Reusable Tailwind component classes using `@apply`
 - [x] Dark mode toggle with dark styling for sections, navigation, cards, form fields, and buttons
-- [ ] Page-load intro animation (GSAP timeline)
-- [ ] Scroll reveals on every section below the hero (ScrollTrigger)
-- [ ] Scroll progress bar (scrub)
-- [ ] Reduced-motion support
+- [x] GSAP page-load intro timeline with replay button
+- [x] Scroll reveals on every section below the hero (ScrollTrigger)
+- [x] Scroll progress bar linked to page scroll with scrub
+- [x] Reduced-motion support keeps all content visible and disables motion
+- [x] Public GitHub Pages deployment
 
 ## Built With
 
