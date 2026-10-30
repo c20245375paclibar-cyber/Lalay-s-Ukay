@@ -1,5 +1,5 @@
+
 const darkModeToggle = document.querySelector("#darkModeToggle");
-const replayIntroButton = document.querySelector("#replayIntro");
 const scrollProgress = document.querySelector("#scroll-progress");
 
 darkModeToggle.addEventListener("click", () => {
@@ -17,7 +17,6 @@ let introTimeline;
 const motionEffects = gsap.matchMedia();
 
 motionEffects.add("(prefers-reduced-motion: no-preference)", () => {
-    replayIntroButton.hidden = false;
     scrollProgress.hidden = false;
 
     // power3.out settles quickly while keeping the intro gentle.
@@ -70,11 +69,6 @@ motionEffects.add("(prefers-reduced-motion: no-preference)", () => {
 
     return () => {
         introTimeline = undefined;
-        replayIntroButton.hidden = true;
         scrollProgress.hidden = true;
     };
-});
-
-replayIntroButton.addEventListener("click", () => {
-    introTimeline?.restart();
 });
